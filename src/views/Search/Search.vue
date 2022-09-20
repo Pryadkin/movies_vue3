@@ -1,13 +1,19 @@
-<!-- <script setup lang='ts'>
+<script setup lang='ts'>
+import { defineComponent, ref } from 'vue'
+import { NPagination } from 'naive-ui'
 
-</script> -->
+const page = ref(2)
+</script>
 
 <template>
   <div class="search-container">
-    Search
+      <n-pagination v-model:page="page" :page-count="100" :page-slot="10" />
   </div>
 </template>
 
-<style>
-
+<style type="scss">
+.n-pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
 </style>
